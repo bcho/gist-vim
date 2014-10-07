@@ -718,6 +718,8 @@ function! gist#Gist(count, line1, line2, ...) abort
       let anonymous = 1
     elseif arg =~ '^\(-s\|--description\)$\C'
       let gistdesc = ''
+    elseif arg =~ '^\(-t\|--trick\)$\C'
+      let gistdesc = 'trick'
     elseif arg =~ '^\(-c\|--clipboard\)$\C'
       let clipboard = 1
     elseif arg =~ '^--rawurl$\C' && gistidbuf != '' && g:gist_api_url == 'https://api.github.com/'
